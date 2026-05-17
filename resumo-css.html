@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Resumo: Capítulo 3 - CSS</title>
+	<link href="CSS-resumo.css" type="text/css" rel="stylesheet" />
+    </head>
+
+    <body>
+    <table class="table-principal" width="100%" border="0" cellpadding="3" cellspacing="5">
+	<tr>
+		<!-- Essa são as tags básicas para fazer a 'capa' usando <table> e a centralização do texto e das imagens -->
+		<td colspan="2" class="capa">
+			<img 
+			   src = "https://i.pinimg.com/1200x/92/cb/91/92cb9183306417289aa9b6be3ba83c6e.jpg" alt="img de capa" class="img-capa" 
+			   alt = "Capa do livro - Legenda alternative"
+			/>
+		</td>
+	</tr>	
+	
+	<!------ Reponsável pela formatação geral ----->
+	<tr>
+		<td class="colum-menu" width="20%" valign="top" border="0" >
+			<div class="menu-box">
+			<h3>Seções deste Resumo</h3>
+			 	<ul>
+					<li><a href="#intro">Introdução e Princípios do CSS</a></li>
+					<li><a href="#select">Seletores e Especificidade</a></li>
+					<li><a href="#formatacao">Formatação de Texto, Cores, Listas e Tabelas</a></li>
+					<li><a href="#layout">Sistemas de Layout e Posicionamento</a></li>
+				</ul>
+			</div>
+		</td>
+
+
+	<!------ titulo-destaque=titulo-central e content =texto-principal ----->
+		<td class="colum-conteudo" width="80%" align="left" >
+				<h1 class="titulo-destaque">Resumo Capítulo 3 - Estilizando Páginas Web usando CSS</h1>
+					<h2 id="intro">Introdução e Princípios do CSS</h2>
+				<p><b>Conceito:</b> CSS é uma liguagem de estilo utilizada para controlar como os elementos HTML são visualizados no frontend</p>
+			
+				<h3>Estrutura de uma Regra CSS:</h3>
+				<ul>
+					<img src="https://www.w3schools.com/css/img_selector.gif"
+					alt = "imagem da estrutura de uma regra CSS"
+					class="img-codigo" />
+					<li><b>Selector:</b> Identifica quais elementos HTML serão afetados pela regra. </li>
+					<li><b>Declaração:</b> A declaração define o estilo propiamente dito, um bloco de declarações contém uma ou mais declarações separadas por ponto-e-vírgula e vários blocos são delimitados por chaves.
+		Cada declaração inclui o nome de uma propriedade CSS(ex:cor, fonte, tamanho) e um valor(ex:azul, Arial, 12), separados por dois pontos. </li>
+				</ul>
+			
+			<p>__________________________________________________________________________________________________________________________</p>
+		
+		<br>
+			
+			<h2 id="select">Seletores e Especificidade</h2>
+			<p>Os seletores são usados para definir quais elementos HTML são afetados por uma regra CSS </p>
+			<ul>
+				<img src="C:\Users\helle\Downloads\carbon.png"
+				alt = "imagem de um código css de classe"
+				class="img-codigo"/>
+				<li><b>Tipos de seletores:</b>seletores de tipo (tags como h1, p), existem seletores de classe (.classe), ID seletor(#id), seletor universal(*), seletor de atributo, e seletores de hierarquia (descendentes, filhos diretos, irmãos).</li>
+				<li><b>Pseudo-classes e Pseudo-elementos:</b>Usados para estilizar estados específicos (ex: <code>:hover</code> para passar o mouse) ou partes de um elemento (ex: <code>::first-line</code>).</li>
+				<li><b>Especificidade:</b> Quando múltiplas regras conflitam, o navegador calcula a especificidade baseada em contadores: (A) IDs, (B) classes/atributos/pseudo-classes e (C) tipos/pseudo-elementos. Se os seletores forem os mesmos, a regra CSS do último seletor definido é usada e caso eles sejam diferentes o seletor mais específico é usado.</li>
+				<li><b>Herança:</b> Muitas propriedades (como fontes e cores) são herdadas dos elementos pais para os elementos filhos, a menos que uma regra mais específica seja definida.</li>
+			</ul>
+			
+			<br>
+			<!------ ----------------------------------------------------------------------------------------------------------------------------- ----->	
+			<table class="tabela-estilo">
+				<thead>
+					<tr>
+						<th colspan="2"><h2 id="formatacao">Formatação de Texto, Cores, Listas e Tabelas</h2></th>
+					</tr>
+				</thead>
+				<tbody class="texto-tabela">
+					<tr>
+						<td><b>Texto e Cores</b></td>
+						<td>O CSS permite definir cores de texto (<code>color</code>) e fundo (<code>background-color</code>), além de famílias de fontes (<code>font-family</code>), tamanhos (<code>font-size</code>), estilo da fonte(<code>font-weight</code> ou <code>font-style</code>), alinhamentos (<code>text-align</code>) e espaçamentos entre linhas (<code>line-height</code>).</td>
+					</tr>
+					<tr>
+						<td><b>Listas</b></td>
+						<td>É possível personalizar marcadores de listas com <code>list-style-type</code> para especificar sua aparência, dependendo do tipo da lista diferentes valores são aplicáveis para essa propriedade. Usar imagens personalizadas com <code>list-style-image</code> e controlar o recuo do texto na lista com<code>list-style-position</code> (valores <code>inside</code> ou <code>outside</code>).</td>
+					</tr>
+					<tr>
+						<td><b>Tabelas</b></td>
+						<td>O design de tabelas envolve propriedades como <code>border</code> para as bordas de toda a tabela, <code>border-collapse</code> para unir bordas próximas e <code>padding</code> para definir o espaçamento interno das células. O uso de pseudo-classes como <code>:nth-child(even/odd)</code> é comum para criar linhas zebradas.</td>
+					</tr>
+				</tbody>
+			</table>
+
+			<!------ -------------------------------------------------------------------------------------------------------------------------------- ----->
+			
+			<br>
+			
+			<h2 id="layout">Sistemas de Layout e Posicionamento</h2>
+			<p><b>Isso serve para definir a posição de um elemento HTML em uma página web</b></p>
+			<dl>
+				<dt><h3>Princípios de Posicionamento:</h3></dt>
+			</dl>
+			<ul>
+				<li><b>Block-level vs. Inline-level:</b>
+					Elementos de bloco começam em uma nova linha e ocupam toda a largura disponível; elementos inline ocupam apenas o espaço necessário e ficam lado a lado.</li>
+				<li><b>Tipos de Posicionamento:</b>
+						A propriedade <code>position</code> define como um elemento é posicionado na página:  <code>static</code> (fluxo normal), <code>relative</code> (relativo à sua posição no ‘fluxo normal’) , <code>absolute</code> (posição em relação ao elemento pai posicionado), <code>fixed</code>(relativo à janela do navegador) e <code>sticky</code> (ao rolar a página até um ponto especificado o elemento é fixado).</li>
+			</ul>
+
+			<dl>
+				<dt><h3>Layouts Modernos</h3></dt>
+			</dl>
+			<ul>
+				<li><b>Float Layout:</b>
+					Pode ser usado para determinar o comportamento do elementos em relação ao texto, com a propriedade <code>float</code>. No entanto hoje existem duas alternativas melhores, layout flexbox e o layout grid.</li>
+				<li><b>Flexbox Layout (Unidimensional):</b>
+					Foca no ajuste dinâmico de espaço e alinhamento de itens em uma única direção (linha ou coluna). Um 'container flex' ajusta dinamicamente o tamanho de seus 'itens flex' para preencher o espaço disponível ou evitar transbordamento tanto para arranjos verticais quanto para horizontais.</li>
+				<li><b>Grid Layout (Bidimensional):</b> 
+				Permite o posicionamento flexível de elementos em uma grade de linhas e colunas, facilitando a criação de layouts complexos e estruturados. Define-se um 'grid container' e as áreas onde os 'grid items' devem se posicionar.</li>
+			</ul>
+		</td>
+	     </tr>
+	</table>
+    </body>
+</html>
+
+
+
+
+
+
